@@ -1,0 +1,152 @@
+/* Transfer.css */
+
+.transfer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.transfer-form {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.transfer-form select,
+.transfer-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.transfer-form select:focus,
+.transfer-form input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.transfer-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.transfer-form button:hover {
+    background-color: #0056b3;
+}
+
+.transfer-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.transactions-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.transaction-block {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    padding: 16px;
+    border-left: 5px solid #007bff;
+    transition: transform 0.2s ease;
+}
+
+.transaction-block:hover {
+    transform: translateY(-4px);
+}
+
+.tx-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.tx-type {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: white;
+}
+
+.transaction-block.deposit .tx-type {
+    background-color: #28a745;
+}
+
+.transaction-block.transfer .tx-type {
+    background-color: #17a2b8;
+}
+
+.transaction-block.swap .tx-type {
+    background-color: #6f42c1;
+}
+
+.tx-date {
+    font-size: 12px;
+    color: #666;
+}
+
+.tx-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tx-detail {
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .transaction-block {
+        max-width: 90%;
+    }
+}

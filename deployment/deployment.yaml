@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: operation-borderless-frontend-deployment
+  namespace: operation-borderless
+  labels:
+    app: operation-borderless-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: operation-borderless-frontend
+  template:
+    metadata:
+      labels:
+        app: operation-borderless-frontend
+    spec:
+      containers:
+        - name: operation-borderless-frontend
+          image: europe-west1-docker.pkg.dev/borderless-money-455715/project-repo/operation-borderless-frontend:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "250m"
+              memory: "512Mi"
