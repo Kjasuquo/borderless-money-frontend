@@ -101,5 +101,3 @@ function Swap() {
 
 export default Swap;
 
-// docker buildx build --platform linux/amd64 -t europe-west1-docker.pkg.dev/borderless-money-455715/project-repo/operation-borderless-frontend:v1 --push .
-// kubectl rollout restart deployment/operation-borderless-frontend-deployment -n operation-borderless
