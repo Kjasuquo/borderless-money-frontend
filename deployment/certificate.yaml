@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: borderless-cert
+  namespace: operation-borderless
+spec:
+  secretName: borderless-cert-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: borderless-money.xyz
+  dnsNames:
+  - borderless-money.xyz
+  - www.borderless-money.xyz

@@ -101,6 +101,5 @@ function Swap() {
 
 export default Swap;
 
-// T1rU2ZCZ1CDnPh
-// Website for borderless-money.wuaze.com
-// if0_38680746
+// docker buildx build --platform linux/amd64 -t europe-west1-docker.pkg.dev/borderless-money-455715/project-repo/operation-borderless-frontend:v1 --push .
+// kubectl rollout restart deployment/operation-borderless-frontend-deployment -n operation-borderless
