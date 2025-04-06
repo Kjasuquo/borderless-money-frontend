@@ -5,7 +5,7 @@ function Header() {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        navigate('/create-wallet');
+        navigate('/');
     };
 
     return (

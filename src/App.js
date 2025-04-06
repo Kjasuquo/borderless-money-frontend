@@ -11,16 +11,15 @@ import Header from './components/Header';
 
 function AppContent() {
     const location = useLocation();
-    const showHeader = location.pathname !== '/create-wallet';
+    const showHeader = location.pathname !== '/';
 
     return (
         <>
             {showHeader && <Header />}
             <div style={{ marginTop: showHeader ? '70px' : '0' }}>
                 <Routes>
-                    <Route path="/" element={<Navigate to="/create-wallet" replace />} />
 
-                    <Route path="/create-wallet" element={<CreateWallet />} />
+                    <Route path="/" element={<CreateWallet />} />
                     <Route path="/dashboard/:userID" element={<Dashboard />} />
                     <Route path="/swap/:userID" element={<Swap />} />
                     <Route path="/deposit/:userID" element={<Deposit />} />
